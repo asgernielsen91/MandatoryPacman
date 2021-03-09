@@ -22,13 +22,25 @@ class MainActivity : AppCompatActivity() {
 
         game = Game(this,pointsView)
 
-        //intialize the game view clas and game class
+        //intialize the game view class and game class
         game?.setGameView(gameView)
         gameView.setGame(game)
         game?.newGame()
 
         moveRight.setOnClickListener {
             game?.movePacmanRight(10)
+        }
+
+        moveLeft.setOnClickListener {
+            game?.movePacmanLeft(10)
+        }
+
+        moveUp.setOnClickListener {
+            game?.movePacmanUp(10)
+        }
+
+        moveDown.setOnClickListener {
+            game?.movePacmanDown(10)
         }
 
 
